@@ -42,3 +42,59 @@ transition: 0.3s linear;
 width: 25%;
 height: 600px;
 }
+
+.slider-radio {
+display: flex;
+margin-top: 30px;
+justify-content: flex-end;
+width: 30%;
+}
+
+.radio-input {
+display: none;
+}
+
+.radio-label {
+display: flex;
+justify-content: center;
+align-items: center;
+width: 30px;
+height: 30px;
+padding: 10px;
+margin: 0 5px;
+border-radius: 50%;
+background-color: #0062f5;
+background-clip: content-box;
+cursor: pointer;
+transition: 0.3s linear;
+}
+
+.radio-span {
+width: 24px;
+height: 24px;
+border-radius: 50%;
+}
+
+.slider:has(#radio0:checked) .mem-container {
+  transform: translateX(0);
+}
+
+.slider:has(#radio1:checked) .mem-container{
+  transform: translateX(-25%);
+}
+
+.slider:has(#radio2:checked) .mem-container {
+  transform: translateX(-50%);
+}
+
+.slider:has(#radio3:checked) .mem-container{
+  transform: translateX(-75%);
+}
+
+.radio-label:hover {
+  background-color: white;
+}
+
+.radio-input:checked + .radio-label .radio-span {
+  background-color: #242c22;
+}
