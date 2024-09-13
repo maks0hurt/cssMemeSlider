@@ -125,3 +125,41 @@ font-size: 24px;
 .radio-input:checked + .radio-label .radio-span {
   background-color: #242c22;
 }
+
+@media (max-width: 970px) {
+.slider-text {
+    width: 100%;
+    order: 1;
+}
+.mem-img{
+    height: 400px;
+}
+.slider-radio {
+    justify-content: center;
+    width: 100%;
+}
+}
+@media(max-width:640px){
+    .mem-text{
+        font-size: 20px;
+    }
+    .mem-img{
+        height: 300px;
+    }
+}
+@media(max-width:440px){
+    .mem-img{
+        height: 200px;
+    }
+    .mem-text{
+        font-size: 14px;
+    }
+    .radio-label {
+        width: 22px;
+        height: 22px;
+    }
+    .radio-span{
+        width: 16px;
+        height: 16px;
+    }
+}
