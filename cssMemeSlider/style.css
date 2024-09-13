@@ -75,24 +75,51 @@ height: 24px;
 border-radius: 50%;
 }
 
-.slider:has(#radio0:checked) .mem-container {
+.slider-text {
+width: 70%;
+height: auto;
+margin-top: 30px;
+overflow: hidden;
+}
+
+.text-container {
+display: flex;
+flex-wrap: nowrap;
+width: 400%;
+transition: 0.3s linear;
+}
+
+.mem-text {
+width: 25%;
+font-size: 24px;
+}
+
+.slider:has(#radio0:checked) .mem-container,
+.slider:has(#radio0:checked) .text-container {
   transform: translateX(0);
 }
 
-.slider:has(#radio1:checked) .mem-container{
+.slider:has(#radio1:checked) .mem-container,
+.slider:has(#radio1:checked) .text-container{
   transform: translateX(-25%);
 }
 
-.slider:has(#radio2:checked) .mem-container {
+.slider:has(#radio2:checked) .mem-container,
+.slider:has(#radio2:checked) .text-container {
   transform: translateX(-50%);
 }
 
-.slider:has(#radio3:checked) .mem-container{
+.slider:has(#radio3:checked) .mem-container,
+.slider:has(#radio3:checked) .text-container{
   transform: translateX(-75%);
 }
 
 .radio-label:hover {
   background-color: white;
+}
+
+.radio-label:active {
+  transform: scale(2);
 }
 
 .radio-input:checked + .radio-label .radio-span {
