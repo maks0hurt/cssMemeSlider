@@ -1,0 +1,44 @@
+body {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+margin: 0;
+padding: 0;
+margin-top: 20px;
+font-family: Arial, Helvetica, sans-serif;
+font-weight: 400;
+font-style: normal;
+color: azure;
+background-color: #000000;
+}
+
+.slider {
+display: flex;
+flex-wrap: wrap;
+align-items: center;
+width: 80%;
+max-width: 1080px;
+padding: 50px;
+border-radius: 10px;
+border: 6px solid #5a5e59;
+background-color: #242c22;
+}
+
+.slider-mems {
+width: 100%;
+height: auto;
+border-radius: 16px;
+overflow: hidden;
+}
+
+.mem-container {
+display: flex;
+width: 400%;
+transition: 0.3s linear;
+}
+
+.mem-img {
+width: 25%;
+height: 600px;
+}
