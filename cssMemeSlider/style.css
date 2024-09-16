@@ -1,0 +1,166 @@
+body {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+margin-left: 3.2rem;
+margin-right: 3.2rem;
+padding: 0px;
+margin-top: 2rem;
+font-family: Arial, Helvetica, sans-serif;
+font-weight: 400;
+font-style: normal;
+color: azure;
+background-color: #000000;
+}
+
+.slider {
+display: flex;
+flex-wrap: wrap;
+align-items: center;
+width: 80%;
+max-width: 70rem;
+padding: 4rem;
+border-radius: 0.75rem;
+border: 0.4rem solid #5a5e59;
+background-color: #242c22;
+}
+
+.slider-mems {
+width: 100%;
+height: auto;
+border-radius: 1rem;
+overflow: hidden;
+}
+
+.mem-container {
+display: flex;
+width: 400%;
+transition: 0.3s linear;
+}
+
+.mem-img {
+width: 25%;
+height: 38rem;
+}
+
+.slider-radio {
+display: flex;
+margin-top: 2rem;
+justify-content: flex-end;
+width: 30%;
+}
+
+.radio-input {
+display: none;
+}
+
+.radio-label {
+display: flex;
+justify-content: center;
+align-items: center;
+width: 2rem;
+height: 2rem;
+padding: 0.75rem;
+margin: 0 5px;
+border-radius: 50%;
+background-color: #0062f5;
+background-clip: content-box;
+cursor: pointer;
+transition: 0.3s linear;
+}
+
+.radio-span {
+width: 1.5rem;
+height: 1.5rem;
+border-radius: 50%;
+}
+
+.slider-text {
+width: 70%;
+height: auto;
+margin-top: 2rem;
+overflow: hidden;
+}
+
+.text-container {
+display: flex;
+flex-wrap: nowrap;
+width: 400%;
+transition: 0.3s linear;
+}
+
+.mem-text {
+width: 25%;
+font-size: 1.5rem;
+}
+
+.slider:has(#radio0:checked) .mem-container,
+.slider:has(#radio0:checked) .text-container {
+  transform: translateX(0);
+}
+
+.slider:has(#radio1:checked) .mem-container,
+.slider:has(#radio1:checked) .text-container{
+  transform: translateX(-25%);
+}
+
+.slider:has(#radio2:checked) .mem-container,
+.slider:has(#radio2:checked) .text-container {
+  transform: translateX(-50%);
+}
+
+.slider:has(#radio3:checked) .mem-container,
+.slider:has(#radio3:checked) .text-container{
+  transform: translateX(-75%);
+}
+
+.radio-label:hover {
+  background-color: white;
+}
+
+.radio-label:active {
+  transform: scale(2);
+}
+
+.radio-input:checked + .radio-label .radio-span {
+  background-color: #242c22;
+}
+
+@media (max-width: 61rem) {
+.slider-text {
+    width: 100%;
+    order: 1;
+}
+.mem-img{
+    height: 25rem;
+}
+.slider-radio {
+    justify-content: center;
+    width: 100%;
+}
+}
+@media (max-width: 40rem){
+    .mem-text{
+        font-size: 1.25rem;
+    }
+    .mem-img{
+        height: 19rem;
+    }
+}
+@media(max-width:27.5rem){
+    .mem-img{
+        height: 9rem;
+    }
+    .mem-text{
+        font-size: 0.85rem;
+    }
+    .radio-label {
+        width: 1.4rem;
+        height: 1.4rem;
+    }
+    .radio-span{
+        width: 1rem;
+        height: 1rem;
+    }
+}
